@@ -1,18 +1,18 @@
 This is a springboot application designed to register students. Once the registration is complete , it automatically send an email to particular student's email. This is a maven project. HI!!! I'm Tharindu Ruwasanka. Task is to Develop rest API to register students, once the student registration is complete send email to the student. The application must containerized.
 
-#Database credentials!!!!
+# Database credentials!!!!
 1. Used port: 8081
 2. Database name: student-db
 3. Database username: root
 4. Database password: root
 
-#Email service credentials!!!
+# Email service credentials!!!
 1. host: smtp.gmail.com
 2. port: 587
 3. username: tharinduruwasanka@gmail.com
 4. password: csan uomn yula nqrr
 
-#Used dependencies
+# Used dependencies
 1. Spring Boot DevTools
 2. Lombok
 3. Spring Web
@@ -20,24 +20,24 @@ This is a springboot application designed to register students. Once the registr
 5. Spring Data JPA
 6. MySQL Driver
 
-#Dockerfile
+# Dockerfile
 
 FROM openjdk:17-jdk-slim
 
-# Set the working directory in the container
+#Set the working directory in the container
 WORKDIR /app
 
-# Copy the application JAR file into the container
+#Copy the application JAR file into the container
 COPY target/registerStudent-0.0.1-SNAPSHOT.jar app.jar
 
-# Expose the application's port
+#Expose the application's port
 EXPOSE 8081
 
-# Define the entry point for the container
+#Define the entry point for the container
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
 
-#Steps
+# Steps
 1. Initialize spring file using spring initializer. 
       **Spring boot version: 3.4.4
       **Java version: 17
@@ -54,6 +54,6 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
    ** Register.html: This file contains the form that users will fill out to register. When the user submits the form, it sends a POST request to the controller to register the student.
    ** success.html: A page that confirms the student has been successfully registered.
    
-#Test
+# Test
 1. Open project with Intelij Idea and run the project
 2. To accesses the registration page of the application via the browser go to http://localhost:8081/
