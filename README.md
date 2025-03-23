@@ -20,6 +20,23 @@ This is a springboot application designed to register students. Once the registr
 5. Spring Data JPA
 6. MySQL Driver
 
+#Dockerfile
+
+FROM openjdk:17-jdk-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the application JAR file into the container
+COPY target/registerStudent-0.0.1-SNAPSHOT.jar app.jar
+
+# Expose the application's port
+EXPOSE 8081
+
+# Define the entry point for the container
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
+
 #Steps
 1. Initialize spring file using spring initializer. 
       **Spring boot version: 3.4.4
