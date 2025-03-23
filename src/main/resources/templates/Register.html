@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .gender-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .gender-group label {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Student Registration</h2>
+    <form th:action="@{/registerStudent}" th:object="${student}" method="post">
+        <input type="hidden" th:field="*{studentId}" />
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" th:field="*{name}" name="name" >
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" th:field="*{age}" name="age" >
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" th:field="*{email}" name="email" >
+
+        <label for="phone">Tele:</label>
+        <input type="text" id="phone" th:field="*{phone}" name="phone" >
+
+        <label>Gender:</label>
+        <div class="gender-group">
+            <input type="radio" id="male" name="gender" value="male" >
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" >
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other" >
+            <label for="other">Other</label>
+        </div>
+
+
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+</body>
+</html>
