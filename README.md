@@ -1,16 +1,16 @@
 This is a springboot application designed to register students. Once the registration is complete , it automatically send an email to particular student's email. This is a maven project. HI!!! I'm Tharindu Ruwasanka. Task is to Develop rest API to register students, once the student registration is complete send email to the student. The application must containerized.
 
 #Database credentials!!!!
-1.Used port: 8081
-2.Database name: student-db
-3.Database username: root
-4.Database password: root
+1. Used port: 8081
+2. Database name: student-db
+3. Database username: root
+4. Database password: root
 
 #Email service credentials!!!
-1.host: smtp.gmail.com
-2.port: 587
-3.username: tharinduruwasanka@gmail.com
-4.password: csan uomn yula nqrr
+1. host: smtp.gmail.com
+2. port: 587
+3. username: tharinduruwasanka@gmail.com
+4. password: csan uomn yula nqrr
 
 #Steps
 1. Initialize spring file using spring initializer. 
