@@ -12,6 +12,14 @@ This is a springboot application designed to register students. Once the registr
 3. username: tharinduruwasanka@gmail.com
 4. password: csan uomn yula nqrr
 
+#Used dependencies
+1. Spring Boot DevTools
+2. Lombok
+3. Spring Web
+4. Thymeleaf
+5. Spring Data JPA
+6. MySQL Driver
+
 #Steps
 1. Initialize spring file using spring initializer. 
       **Spring boot version: 3.4.4
